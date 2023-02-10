@@ -6,6 +6,7 @@ let basket = [];
 
 function addItem(newItem){//function with param1/argument
     basket.push(newItem);//adds new items to array 'basket
+    console.log(`added ${newItem} to the list`);//to console log addition of each item
     return true;//returns true after each item added. 
 }
 
@@ -23,17 +24,19 @@ console.log(addItem('bacon','tomato', 'lettuce','cheese')); //adding more iteams
     -add the new item to the global array basket
     -return true indicating the item was added*/
 
-    console.log('***NEXT FUNCTION***');
+    console.log('***LIST FUNCTION***');
 
     
     
     function listItems(){
-        for(item of basket){
+        for(let item of basket){
             console.log(item);
         }//using 'for of' loop to log basket items individually on each line
     }// end listItems function
    
-    console.log(listItems());//
+    console.log(listItems());//tested/"call on function"
+
+    console.log('***EMPTY FUNCTION***')
 
     
 
@@ -43,3 +46,14 @@ console.log(addItem('bacon','tomato', 'lettuce','cheese')); //adding more iteams
 
     Create a function called empty. It should:
         -reset the basket to an empty array*/
+    
+function empty(){
+    basket.length = 0;//setting basket array length to 0 to clear everything
+    console.log('reseting basket to 0')
+}
+
+console.log(empty());//tested in console
+
+
+console.log(basket);
+
